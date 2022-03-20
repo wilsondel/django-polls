@@ -1,3 +1,7 @@
+# Django
 from django.contrib import admin
 
-# Register your models here.
+# Models
+from polls.models import Question
+
+admin.site.register(Question)
