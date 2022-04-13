@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'polls/reset.css' %}">
     <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 
-    <title>Document</title>
+    <title>EdAwards</title>
 </head>
 <body>
-    {% block container %}
-    {% endblock %}
+    <header>
+        <h1>
+            Education Awards
+        </h1>
+    </header>
+    <main>
+        {% block container %}
+        {% endblock %}
+    </main>
+    <footer>
+        <a href="https://platzi.com" target="_blank">Platzi</a>
+        <a href="https://github.com/wilsondel" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/wilson-alirio-delgado-hern%C3%A1ndez-935b7b1a8/" target="_blank">LinkedIn</a>
+    </footer>
 </body>
 </html>
