@@ -1,4 +1,4 @@
-body, header, ul, li, footer {
+body, header, ul, li, footer,fieldset {
     display: flex;
     align-items: center;
     justify-content: center;
