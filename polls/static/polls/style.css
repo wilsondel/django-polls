@@ -6,8 +6,7 @@ body, header, ul, li, footer,fieldset {
 
 body {
     flex-direction: column;
-
-    height: 100vh;
+    height: 90vh;
     background-color: hsl(204,100%,5%);
     font-family: Arial,Helvetica,sans-serif;
 }
