@@ -1,9 +1,13 @@
+# Django
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 
-from django.views.generic import ListView
+# CBV
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
+# Models
 from .models import Question, Choice
 
 # def home(request):
@@ -23,6 +27,14 @@ def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     choices = question.choice_set.all()
     return render(request,"polls/detail.html",{"question": question,"choices":choices})
+
+class DetailView(DetailView):
+    model = Question
+    template_name = "polls/detail.html"
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        context['choices'] = context['id'].choice_set.all()
+        return context
 
 
 def results(request, question_id):

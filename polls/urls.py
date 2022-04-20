@@ -8,7 +8,7 @@ from .views import IndexView
 app_name = "polls"
 urlpatterns = [
     path('', IndexView.as_view(), name='home'),
-    path('thething/<int:question_id>', views.detail, name='detail'),
+    path('detail/<int:question_id>', views.detail, name='detail'),
     path('results/<int:question_id>', views.results, name='results'),
     path('vote/<int:question_id>', views.vote, name='vote')
 ]
