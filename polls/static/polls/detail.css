@@ -1,4 +1,4 @@
-form {
+form, .question_text_detail {
     background: linear-gradient(
         to right,
         hsl(98, 100%, 62%),
